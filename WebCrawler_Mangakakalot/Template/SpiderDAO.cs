@@ -35,6 +35,7 @@ namespace WebCrawler_Mangakakalot.Template
                 cmd.CommandText = GetQuery();
                 cmd.Parameters.AddWithValue("@Title", pop.Title);
                 cmd.Parameters.AddWithValue("@Link", pop.Link);
+                cmd.Parameters.AddWithValue("@Date", DateTime.Today.ToString("dd/MM/yyyy"));
                 cmd.ExecuteNonQuery();
                 state = true;
             }catch(Exception e)

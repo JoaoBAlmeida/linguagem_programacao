@@ -4,9 +4,9 @@ using System.Text;
 
 namespace WebCrawler_Mangakakalot.Template
 {
-    public class Spider : SpiderDAO
+    public class SpiderInsert : SpiderDAO
     {
-        public Spider()
+        public SpiderInsert()
         {
             openDB();
         }
@@ -19,7 +19,7 @@ namespace WebCrawler_Mangakakalot.Template
         //Change into args to "unlock" the possibility of inline code changing
         protected override string GetQuery()
         {
-            return "INSERT INTO mangakakalot (Title, Link) VALUES(@Title,@Link)";
+            return "INSERT INTO mangakakalot (Title, Link, Date) VALUES(@Title,@Link,@Date)";
         }
     }
 }

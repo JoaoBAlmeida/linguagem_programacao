@@ -33,7 +33,7 @@ namespace WebCrawler_Mangakakalot
                 {
                     case 1:
                         //Putting each Popular into the database
-                        Spider spider1 = new Spider();
+                        SpiderInsert spider1 = new SpiderInsert();
                         foreach (Popular pop in pops)
                         {
                             spider1.SetIntoDB(pop);
